@@ -1,0 +1,176 @@
+The class Movie is stated below. An instance of class Movie represents a film. This class has the following three properties:
+
+title, which is a String representing the title of the movie
+studio, which is a String representing the studio that made the movie
+rating, which is a String representing the rating of the movie (i.e. PG­13, R, etc)
+a) Write a constructor for the class Movie, which takes a String representing the title of the movie, a String representing the studio, and a String representing the rating as its arguments, and sets the respective class properties to these values.
+
+b) The constructor for the class Movie will set the class property rating to "PG" as default when no rating is provided.
+
+c) Write a method getPG, which takes an array of base type Movie as its argument, and returns a new array of only those movies in the input array with a rating of "PG". You may assume the input array is full of Movie instances. The returned array need not be full.
+
+d) Write a piece of code that creates an instance of the class Movie with the title “Casino Royale”, the studio “Eon Productions”, and the rating “PG­13”
+
+
+
+class Movie {
+  constructor(title, studio, rating) {
+  this.title = title;
+  this.studio = studio;
+  this.rating = rating;
+  if (typeof this.rating === "undefined") {
+  this.rating = "PG";
+  }
+  }
+ }
+ let mov1 = new Movie("lEO", "Super class");
+ let mov2 = new Movie("vikaram", "gold", "5");
+ let mov3 = new Movie("jawan", "silver","5");
+ let mov4 = new Movie("Jailer", "platinum");
+ console.log(mov1)
+ function getPG(mov) {
+  let res = []
+  for (let i = 0; i < mov.length; i++) {
+ if (mov[i].rating =="‘PG") {
+  res.push(mov[i].title);
+  }
+  }
+  return res;
+ }
+ let arr = [mov1, mov2, mov3, mov4]
+ console.log(getPG(arr));
+ let mov5 = new Movie("Pic", "sun producation", "PG13");
+ console.log(mov5);
+
+-----------------------------------------------------------------------------------------------------------------
+
+
+2.Question :
+
+Convert the UML diagram to Typescript class. — use number for double
+
+
+class Circle {
+  constructor(radius, color) {
+          this.radius = radius;
+          this.color = color;
+      }
+  getColor() { return this.color; }
+      setColor(color) { this.color = color; }
+      getRadius() { return this.radius; }
+      setRadius(radius) { this.radius = radius; }
+      tostring() {
+          return ('[radius = ' + this.radius + ',color = ' + this.color + ']')
+      }
+  getArea() {
+          return Math.PI * this.radius * this.radius;
+      }
+      getCircumference() { return 2 * (Math.PI) * this.radius }
+  }
+  let circ = new Circle(1.0, 'red');
+  console.log(circ);
+  console.log(circ.getColor());
+  console.log(circ.getRadius());
+  circ.setColor('blue')
+  console.log(circ.getColor())
+  circ.setRadius(5.0)
+  console.log(circ.getRadius());
+  console.log('Circle : ' + circ.tostring());
+  console.log(circ.getArea());
+  console.log(circ.getCircumference());
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+3.Question:
+
+Write a “person” class to hold all the details.
+
+
+
+class Person {
+  constructor(name, age, gender, designation) {
+      this.name = name;
+      this.age = age;
+      this.gender = gender;
+      this.designation = designation;
+  }
+  get pName() { return this.name; }
+  set pName(p) { this.name = p; }
+  get pAge() { return this.age; }
+  set pAge(p) { this.age = p; }
+  get pGender() { return this.gender; }
+  set pGender(p) { this.gender = p; }
+  get pDesignation() { return this.designation; }
+  set pDesignation(p) { this.designation = p; }
+}
+let person = new Person('balaji', 23, 'Male', 'Developers');
+console.log(person);
+
+
+--------------------------------------------------------------------------------------------------------------
+
+
+
+4. write a class to calculate uber price.
+
+
+class Uber {
+    distance = 10;
+    wait = 5;
+    consructor(distance, wait) {
+        this.distance = distance;
+        this.wait = wait;
+    }
+    get distance() { return this.distance; }
+    set distance(value) { this.distance = value; }
+    get wait() { return this.wait; }
+    set wait(value) { this.wait = value; }
+calculatePrice(dis) {
+        //1km = Rs.6
+        //min = Rs.70
+        let min = 70;
+        this.distance = dis;
+        let price = dis * 6;
+        let res = 0;
+        if (min > price) {
+            res = min;
+        } else {
+            res = price;
+        }
+        console.log(res);
+        return res;
+}
+    calculateWait(w) {
+        let res = 0;
+this.wait = w;
+        let result = 0;
+        //30min wait is Rs.100
+        if (w > 15 && w < 30) {
+            result = 50;
+}
+        if (w < 15) {
+            result = 0;
+        }
+        if (w > 30) {
+            result = Math.floor(w / 30);
+            res = result * 100;
+}
+        console.log(res);
+        return res;
+    }
+}
+let raid = new Uber(300, 45);
+let p1 = (raid.calculatePrice(300))
+let w1 = (raid.calculateWait(45))
+console.log(p1 + w1);
+ if (mov[i].rating == "PG") {
+  res.push(mov[i].title);
+  }
+  }
+  return res;
+ }
+ let arr = [mov1, mov2, mov3, mov4]
+ console.log(getPG(arr))
+ let mov5 = new Movie("picture" , "sun production" , "PG13");
+ console.log(mov5);
